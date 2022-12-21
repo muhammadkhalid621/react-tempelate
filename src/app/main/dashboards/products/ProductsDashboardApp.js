@@ -125,7 +125,7 @@ function ProductsDashboardApp() {
       // setIsLoading(false);
       setErrors(newErrors);
     } else {
-      setErrors({})
+      setErrors({});
       if (open) {
         setLists((oldArray) => [...oldArray, formValues]);
         setOpen(false);
@@ -239,13 +239,18 @@ function ProductsDashboardApp() {
                       defaultValue={selectedRow.id}
                       onChange={handleInputChange}
                     ></TextField>
-                    {errors.id && <p style={{
-                      fontSize: 20,
-                      fontWeight: 300,
-                      marginTop: '0.5rem',
-                      color: 'red'
-
-                    }}>{errors.id}</p>}
+                    {errors.id && (
+                      <p
+                        style={{
+                          fontSize: 20,
+                          fontWeight: 300,
+                          marginTop: "0.5rem",
+                          color: "red",
+                        }}
+                      >
+                        {errors.id}
+                      </p>
+                    )}
                   </div>
                   <div className="col">
                     <TextField
@@ -261,13 +266,18 @@ function ProductsDashboardApp() {
                       defaultValue={selectedRow.name}
                       onChange={handleInputChange}
                     ></TextField>
-                    {errors.name && <p style={{
-                      fontSize: 20,
-                      fontWeight: 300,
-                      marginTop: '0.5rem',
-                      color: 'red'
-
-                    }}>{errors.name}</p>}
+                    {errors.name && (
+                      <p
+                        style={{
+                          fontSize: 20,
+                          fontWeight: 300,
+                          marginTop: "0.5rem",
+                          color: "red",
+                        }}
+                      >
+                        {errors.name}
+                      </p>
+                    )}
                   </div>
                   <div className="col">
                     <TextField
@@ -281,13 +291,18 @@ function ProductsDashboardApp() {
                       defaultValue={selectedRow.amount}
                       onChange={handleInputChange}
                     ></TextField>
-                    {errors.amount && <p style={{
-                      fontSize: 20,
-                      fontWeight: 300,
-                      marginTop: '0.5rem',
-                      color: 'red'
-
-                    }}>{errors.amount}</p>}
+                    {errors.amount && (
+                      <p
+                        style={{
+                          fontSize: 20,
+                          fontWeight: 300,
+                          marginTop: "0.5rem",
+                          color: "red",
+                        }}
+                      >
+                        {errors.amount}
+                      </p>
+                    )}
                   </div>
                   <div className="col">
                     <TextField
@@ -301,13 +316,18 @@ function ProductsDashboardApp() {
                       defaultValue={selectedRow.quantity}
                       onChange={handleInputChange}
                     ></TextField>
-                    {errors.quantity && <p style={{
-                      fontSize: 20,
-                      fontWeight: 300,
-                      marginTop: '0.5rem',
-                      color: 'red'
-
-                    }}>{errors.quantity}</p>}
+                    {errors.quantity && (
+                      <p
+                        style={{
+                          fontSize: 20,
+                          fontWeight: 300,
+                          marginTop: "0.5rem",
+                          color: "red",
+                        }}
+                      >
+                        {errors.quantity}
+                      </p>
+                    )}
                   </div>
                   <Button
                     variant="contained"
@@ -361,18 +381,6 @@ function ProductsDashboardApp() {
                                     display: "flex",
                                   }}
                                 >
-                                  <EditIcon
-                                    onClick={() => updateRow(row)}
-                                    style={{
-                                      cursor: "pointer",
-                                    }}
-                                  />
-                                  <DeleteIcon
-                                    onClick={() => deleteRow(row)}
-                                    style={{
-                                      cursor: "pointer",
-                                    }}
-                                  />
                                   <Typography
                                     className=""
                                     color="text.secondary"
@@ -416,6 +424,18 @@ function ProductsDashboardApp() {
                                   >
                                     {value}
                                   </Typography>
+                                  <EditIcon
+                                    onClick={() => updateRow(row)}
+                                    style={{
+                                      cursor: "pointer",
+                                    }}
+                                  />
+                                  <DeleteIcon
+                                    onClick={() => deleteRow(row)}
+                                    style={{
+                                      cursor: "pointer",
+                                    }}
+                                  />
                                 </TableCell>
                               );
                             }
