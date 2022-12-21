@@ -413,17 +413,7 @@ function ProductsDashboardApp() {
                             case "quantity": {
                               return (
                                 <TableCell key={key} component="th" scope="row">
-                                  <Typography
-                                    className={clsx(
-                                      "inline-flex items-center font-bold text-10 px-10 py-2 rounded-full tracking-wide uppercase",
-                                      value === "pending" &&
-                                        "bg-red-100 text-red-800 dark:bg-red-600 dark:text-red-50",
-                                      value === "completed" &&
-                                        "bg-green-50 text-green-800 dark:bg-green-600 dark:text-green-50"
-                                    )}
-                                  >
-                                    {value}
-                                  </Typography>
+                                  <Typography>{value.toString()}</Typography>
                                   <EditIcon
                                     onClick={() => updateRow(row)}
                                     style={{
